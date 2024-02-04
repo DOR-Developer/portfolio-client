@@ -1,0 +1,140 @@
+.dor-helper-container {
+  --info-tooltip-color: #3051b5;
+  --success-tooltip-color: #2ea679;
+  --error-tooltip-color: #d51d51;
+}
+
+.dor-tooltips-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 22px;
+}
+
+.dor-tooltip {
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+  padding: 1rem;
+  border-radius: 5px;
+  border-bottom-right-radius: 0;
+
+  background-color: var(--tooltip-background-color);
+  color: white;
+
+  cursor: pointer;
+
+  --tooltip-background-color: #333;
+}
+.dor-tooltip-info {
+  --tooltip-background-color: var(--info-tooltip-color);
+}
+.dor-tooltip-success {
+  --tooltip-background-color: var(--success-tooltip-color);
+}
+.dor-tooltip-error {
+  --tooltip-background-color: var(--error-tooltip-color);
+}
+
+.dor-tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 100%;
+  margin-bottom: -8px;
+  border-top: 8px solid transparent;
+  border-left: 8px solid var(--tooltip-background-color);
+  border-bottom: 8px solid var(--tooltip-background-color);
+  border-right: 8px solid transparent;
+}
+
+.dor-helper-container {
+  display: flex;
+  align-items: end;
+  gap: 2rem;
+
+  height: 50px;
+
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+
+  margin: 2rem;
+}
+
+.dor-helper {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  margin-left: auto;
+  border-radius: 50%;
+
+  opacity: 0.5;
+  --helper-color: #777;
+  background-color: var(--helper-color);
+
+  cursor: pointer;
+
+  --eye-radius: 20px;
+  --mouth-size: 14px;
+}
+.dor-helper:hover {
+  opacity: 1;
+}
+.dor-helper-info {
+  /* TODO : Change emotion to neutral */
+  --helper-color: var(--info-tooltip-color);
+}
+.dor-helper-success {
+  /* TODO : Change emotion to happy */
+  --helper-color: var(--success-tooltip-color);
+}
+.dor-helper-error {
+  /* TODO : Change emotion to sad */
+  --helper-color: var(--error-tooltip-color);
+}
+.dor-helper .left-eye {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: -15%;
+
+  width: var(--eye-radius);
+  height: var(--eye-radius);
+  border-radius: 50%;
+
+  background-color: #fff;
+}
+.dor-helper .right-eye {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: -15%;
+
+  width: var(--eye-radius);
+  height: var(--eye-radius);
+  border-radius: 50%;
+
+  background-color: #fff;
+}
+.dor-helper .mouth {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: calc(50% - (var(--mouth-size) / 2));
+
+  width: var(--mouth-size);
+  height: 4px;
+  border-radius: 0 0 50% 50%;
+
+  background-color: #fff;
+}
+
+.dor-helper .mouth-open {
+  height: 14px;
+  width: calc(var(--mouth-size) + 4px);
+  left: calc(50% - (var(--mouth-size) / 2) - 2px);
+  top: 35%;
+}

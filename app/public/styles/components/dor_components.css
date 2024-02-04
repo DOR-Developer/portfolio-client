@@ -1,0 +1,31 @@
+@import "./dor_tooltip.css";
+
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+.material-symbols-outlined-fill {
+  font-variation-settings:
+    "FILL" 1,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+}
+
+.dor-hidden {
+  display: none !important;
+}
+.dor-invisible {
+  visibility: hidden !important;
+}
+.dor-disabled {
+  cursor: default !important;
+  color: #d0d0d0;
+  background-color: #fff;
+}
+.dor-no-pointer {
+  cursor: default !important;
+}

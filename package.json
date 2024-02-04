@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "start": "serve ./app",
+        "check": "eslint ./",
+        "fix": "eslint ./ --fix"
+    },
+    "dependencies": {
+        "serve": "^14.2.1"
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0"
+    }
+}
