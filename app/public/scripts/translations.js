@@ -9,7 +9,7 @@ export default {
 			about: "Sobre mí",
 			cv: "CV",
 		},
-		"html-title": "Portfolio Daniel Otero Rivera",
+		"html-title": "Portfolio | dordev",
 		title: "Bienvenid@ a mi portfolio.",
 		cv: {
 			full: "Diseño",
@@ -92,7 +92,7 @@ Mi idea es ir desarrollándolo poco a poco en mi tiempo libre!`,
 			about: "About me",
 			cv: "CV",
 		},
-		"html-title": "Portfolio Daniel Otero Rivera",
+		"html-title": "Portfolio | dordev",
 		title: "Welcome to my portfolio.",
 		cv: {
 			full: "Design",

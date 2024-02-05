@@ -31,30 +31,24 @@ document.addEventListener("DOMContentLoaded", () => {
 			behavior: "smooth",
 		});
 	});
-
-    const initialTheme = localStorage.getItem("fav-theme");
-	document.body.classList.add(initialTheme ?? "dark");
-	document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${initialTheme ?? "dark"}.ico`;
-
+	
 	document.getElementById("change-theme").addEventListener("click", () => {
-		const body = document.body;
-		const theme = body.classList.contains("dark") ? "light" : "dark";
-		body.classList.remove("dark");
-        body.classList.remove("light");
-        body.classList.add(theme);
-        localStorage.setItem("fav-theme", theme);
-        document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${theme}.ico`;
+		toggleWebTheme();
 	});
 
 	setWebLanguage();
+    toggleWebTheme();
 
 	Array.from(document.getElementsByClassName("change-language")).forEach(
 		(button) => {
 			try {
 				button.addEventListener("click", (ev) => {
 					const id = ev.target.id;
-					const language =
-            id === "language-es" ? "es" : id === "language-en" ? "en" : "en";
+					const language = id === "language-es" 
+                        ? "es" 
+                        : id === "language-en" 
+                            ? "en" 
+                            : "en";
 
 					if (document.body.classList.contains(language)) {
 						return;
@@ -69,6 +63,31 @@ document.addEventListener("DOMContentLoaded", () => {
 			} catch (error) {}
 		},
 	);
+
+    function toggleWebTheme() {
+        try {
+            const light = document.body.classList.contains("light");
+            const dark = document.body.classList.contains("dark");
+
+            const theme = light 
+                ? "light"
+                : dark 
+                    ? "dark"
+                    : localStorage.getItem("fav-theme") ?? "dark";
+                    
+            const newTheme = theme === "dark" 
+                ? "light" 
+                : theme === "light"
+                    ? "dark"
+                    : "dark";
+
+            document.body.classList.remove("light");
+            document.body.classList.remove("dark");
+            document.body.classList.add(newTheme);
+            document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${newTheme}.ico`;
+        
+        } catch (error) {}
+    }
 
 	function setWebLanguage() {
 		try {
@@ -132,6 +151,16 @@ document.addEventListener("DOMContentLoaded", () => {
 					"data",
 					`../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_${language}.pdf`,
 				);
+            try {
+                document
+				.getElementById("cv-download-text")
+				.setAttribute(
+					"href",
+					`../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_${language}.pdf`,
+				);
+            } catch (error) {
+                // To prevent browsers that load the iframe from crashing the app.
+            }
 
 			const routes = Array.from(document.getElementsByTagName("a"));
 			routes.forEach((route) => {
