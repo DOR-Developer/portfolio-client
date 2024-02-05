@@ -32,20 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	});
 
-	document.body.classList.add(localStorage.getItem("fav-theme") ?? "dark");
+    const initialTheme = localStorage.getItem("fav-theme");
+	document.body.classList.add(initialTheme ?? "dark");
+	document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${initialTheme ?? "dark"}.ico`;
 
 	document.getElementById("change-theme").addEventListener("click", () => {
 		const body = document.body;
-		const darkTheme = body.classList.contains("dark");
-		if (darkTheme) {
-			body.classList.remove("dark");
-			body.classList.add("light");
-			localStorage.setItem("fav-theme", "light");
-		} else {
-			body.classList.remove("light");
-			body.classList.add("dark");
-			localStorage.setItem("fav-theme", "dark");
-		}
+		const theme = body.classList.contains("dark") ? "light" : "dark";
+		body.classList.remove("dark");
+        body.classList.remove("light");
+        body.classList.add(theme);
+        localStorage.setItem("fav-theme", theme);
+        document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${theme}.ico`;
 	});
 
 	setWebLanguage();
