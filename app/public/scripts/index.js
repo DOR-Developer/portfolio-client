@@ -194,43 +194,46 @@ document.addEventListener("DOMContentLoaded", () => {
 		} catch (error) {}
 	}
 
-	setTimeout(() => {
-		document
-			.getElementById("profile-pic-loader")
-			.classList.remove("loading-border");
-	}, 750);
+	// setTimeout(() => {
+	// 	document
+	// 		.getElementById("profile-pic-loader")
+	// 		.classList.remove("loading-border");
+	// }, 750);
 
-    let loadingImageTimeout = null;
-	let imageSourceCount = 0;
-	document.getElementById("profile-pic").addEventListener("click", (ev) => {
-		try {
-			imageSourceCount++;
+    // Not used. Image loader working with picsum.
+    // Was quite slow on production so it was changed to the brand logo. 
+
+    // let loadingImageTimeout = null;
+	// let imageSourceCount = 0;
+	// document.getElementById("profile-pic").addEventListener("click", (ev) => {
+	// 	try {
+	// 		imageSourceCount++;
             
-            document
-                .getElementById("profile-pic-loader")
-                .classList.remove("loading-border");
-            if (loadingImageTimeout) {
-                clearTimeout(loadingImageTimeout);
-            }
-            // 1 milisecond needed to remove the css class 
-            // before setting it so the animation resets properly.
-            setTimeout(() => {
-                document
-				.getElementById("profile-pic-loader")
-				.classList.add("loading-border");
-            }, 1);
+    //         document
+    //             .getElementById("profile-pic-loader")
+    //             .classList.remove("loading-border");
+    //         if (loadingImageTimeout) {
+    //             clearTimeout(loadingImageTimeout);
+    //         }
+    //         // 1 milisecond needed to remove the css class 
+    //         // before setting it so the animation resets properly.
+    //         setTimeout(() => {
+    //             document
+	// 			.getElementById("profile-pic-loader")
+	// 			.classList.add("loading-border");
+    //         }, 1);
 			
-			loadingImageTimeout= setTimeout(() => {
-				document
-					.getElementById("profile-pic-loader")
-					.classList.remove("loading-border");
-                    loadingImageTimeout = null;
-			}, 750);
+	// 		loadingImageTimeout= setTimeout(() => {
+	// 			document
+	// 				.getElementById("profile-pic-loader")
+	// 				.classList.remove("loading-border");
+    //                 loadingImageTimeout = null;
+	// 		}, 750);
 
-			ev.target.setAttribute(
-				"src",
-				"https://picsum.photos/" + (500 + imageSourceCount),
-			);
-		} catch (error) {}
-	});
+	// 		ev.target.setAttribute(
+	// 			"src",
+	// 			"https://picsum.photos/" + (500 + imageSourceCount),
+	// 		);
+	// 	} catch (error) {}
+	// });
 });

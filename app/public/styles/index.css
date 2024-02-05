@@ -418,7 +418,7 @@ section#about {
     justify-content: start;
 }
 
-#profile-pic-container {
+/* #profile-pic-container {
     transition: transform 0.4s;
     position: relative;
     display: flex;
@@ -426,17 +426,22 @@ section#about {
     align-items: center;
     width: 210px;
     height: 210px;
-}
+} */
 
-#profile-pic-container:hover:not(:active) {
+/* #profile-pic-container:hover:not(:active) {
     transform: scale(1.2);
-}
+} */
 
-img#profile-pic {
+/* img#profile-pic {
     border-radius: 50%;
     cursor: pointer;
     object-fit: contain;
     z-index: 1;
+} */
+#profile-logo {
+    height: 200px;
+    width: 200px;
+    fill: var(--lightbulb-color);
 }
 
 #profile-pic-loader {
