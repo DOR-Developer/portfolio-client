@@ -42,6 +42,7 @@ body.dark {
     --amber: #ffc239;
     --black: #151618;
     --white: #fff;
+    --footer-color: #252627;
 }
 
 body.light {
@@ -55,6 +56,7 @@ body.light {
     --amber: #ff9a47;
     --black: #222;
     --white: #fff;
+    --footer-color: #f7f7f7;
 }
 
 hr {
@@ -125,7 +127,8 @@ nav#language-menu button {
     background-color: rgba(18, 18, 19, 0.85);
 }
 
-nav#language-menu button:hover {
+nav#language-menu button:hover, 
+nav#language-menu button:active {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
@@ -163,7 +166,8 @@ nav#side-navigation ul li {
     transform-origin: 0% 50%;
 }
 
-nav#side-navigation ul li:hover {
+nav#side-navigation ul li:hover, 
+nav#side-navigation ul li:active {
     transform: scale(1.35);
 }
 
@@ -184,11 +188,13 @@ nav#side-navigation #show-side-navigation {
     transition: width 0.25s ease-out;
 }
 
-nav#side-navigation:hover ul {
+nav#side-navigation:hover ul, 
+nav#side-navigation:active ul {
     display: flex;
 }
 
-nav#side-navigation:hover #show-side-navigation {
+nav#side-navigation:hover #show-side-navigation, 
+nav#side-navigation:active #show-side-navigation {
     width: 250px;
     height: 5px;
     border-radius: 0;
@@ -284,7 +290,7 @@ section#introduction {
     padding-top: 6.5rem;
 }
 
-section#introduction #contact-email:hover {
+.contact-email:hover {
     color: var(--lightbulb-color);
 }
 
@@ -309,7 +315,8 @@ section#cv {
 }
 
 section#cv button.selected,
-section#cv button:hover {
+section#cv button:hover, 
+section#cv button:active {
     color: var(--lightbulb-color);
     border-bottom-color: var(--lightbulb-color);
 }
@@ -332,12 +339,13 @@ section#cv button:hover {
     border-radius: 0;
 }
 
-iframe#cv-preview {
+object#cv-preview {
     display: flex;
     align-items: center;
     justify-content: center;
     flex: 1 1 auto;
     width: 100%;
+    min-height: 500px;
     border-radius: 5px;
 }
 
@@ -346,14 +354,15 @@ pre#cv-preview-text {
 }
 
 a#cv-download-text {
-    transition: background-color 0.4s;
     border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
     padding: 0.5rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
 
-a#cv-download-text:hover {
+a#cv-download-text:hover:not(:active) {
     background-color: var(--lightbulb-color);
 }
 
@@ -383,7 +392,7 @@ figure>a {
     border: 2px solid #222;
 }
 
-.figure-image:hover {
+.figure-image:hover:not(:active) {
     transform: scale(1.05);
 }
 
@@ -417,7 +426,7 @@ section#about {
     height: 210px;
 }
 
-#profile-pic-container:hover {
+#profile-pic-container:hover:not(:active) {
     transform: scale(1.2);
 }
 
@@ -474,7 +483,7 @@ button#go-to-top {
     border-radius: 50%;
 }
 
-button#go-to-top:hover {
+button#go-to-top:hover:not(:active) {
     transform: scale(1.5);
     fill: var(--secondary-color);
     background-color: var(--primary-color);
@@ -487,7 +496,7 @@ button#download-cv {
     color: var(--primary-color);
 }
 
-button#download-cv:hover {
+button#download-cv:hover:not(:active) {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
@@ -509,11 +518,11 @@ a#change-theme {
     cursor: pointer;
 }
 
-a.no-route-small:hover {
+a.no-route-small:hover, a.no-route-small:active {
     transform: scale(1.2);
 }
 
-#change-theme:hover {
+#change-theme:hover:not(:active) {
     fill: var(--lightbulb-color);
     border-color: var(--lightbulb-color) !important;
     transform: scale(1.2);
@@ -523,8 +532,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--footer-color);
     flex: 0 0 auto;
     padding: 2rem;
     margin-top: 2.5rem;

@@ -42,6 +42,7 @@ Algunas de mis tareas diarias incluyen:
 		credits: {
 			images: "Imágenes de Lorem Picsum.",
 			icons: "Iconos de Google Fonts.",
+            contact: "Contacta conmigo: ", 
 		},
 		components: {
 			info: `A continuación se muestra una previsualización de mis componentes personales, creados con JavaScript y jQuery desde cero.
@@ -125,6 +126,7 @@ Some of my daily tasks involve:
 		credits: {
 			images: "Images by Lorem Picsum.",
 			icons: "Icons by Google Fonts.",
+            contact: "Contact me at ", 
 		},
 		components: {
 			info: `Next is a list with previews of some of my custom components, created with JavaScript and jQuery from scratch.

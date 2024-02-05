@@ -1,339 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Daniel Otero Rivera</title>
+    <link rel="shortcut icon" href="./public/assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./public/styles/index.css" />
-  </head>
+</head>
 
-  <body class="monospace">
+<body class="monospace">
     <nav id="language-menu">
-      <button type="button" id="language-es" class="change-language">ES</button>
-      <button type="button" id="language-en" class="change-language">EN</button>
+        <button type="button" id="language-es" class="change-language">ES</button>
+        <button type="button" id="language-en" class="change-language">EN</button>
     </nav>
     <nav id="side-navigation">
-      <ul>
-        <li><a href="#"></a></li>
-        <li><a href="#about"></a></li>
-        <li><a href="#components"></a></li>
-        <li><a href="#table"></a></li>
-        <li><a href="#gallery"></a></li>
-        <li><a href="#kanban"></a></li>
-        <li><a href="#cv"></a></li>
-      </ul>
-      <div id="show-side-navigation"></div>
+        <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#about"></a></li>
+            <li><a href="#components"></a></li>
+            <li><a href="#table"></a></li>
+            <li><a href="#gallery"></a></li>
+            <li><a href="#kanban"></a></li>
+            <li><a href="#cv"></a></li>
+        </ul>
+        <div id="show-side-navigation"></div>
     </nav>
     <div id="web-container">
-      <nav id="top-menu">
-        <ul>
-          <li>
-            <a class="no-route" href="#"></a>
-            <a class="no-route-small" href="#">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path
-                  d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="no-route" href="#about"></a>
-            <a class="no-route-small" href="#about">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path
-                  d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a class="no-route" href="#components"></a>
-            <a class="no-route-small" href="#components">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path
-                  d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li id="download-cv">
-            <a class="no-route" href="#cv"></a>
-            <a class="no-route-small" href="#cv">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path
-                  d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"
-                />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a role="button" id="change-theme">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="24"
-                viewBox="0 -960 960 960"
-                width="24"
-              >
-                <path
-                  d="M480-80q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-200v-80h320v80H320Zm10-120q-69-41-109.5-110T180-580q0-125 87.5-212.5T480-880q125 0 212.5 87.5T780-580q0 81-40.5 150T630-320H330Zm24-80h252q45-32 69.5-79T700-580q0-92-64-156t-156-64q-92 0-156 64t-64 156q0 54 24.5 101t69.5 79Zm126 0Z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <main>
-        <section id="introduction">
-          <div id="profile-pic-container">
-            <div id="profile-pic-loader" class="loading-border"></div>
-            <img
-              title="Image provided by Lorem Picsum"
-              id="profile-pic"
-              src="https://picsum.photos/500"
-              alt="Lorem ipsum randomly generated image"
-              height="200"
-              width="200"
-            />
-          </div>
-          <div>
-            <a
-              id="contact-email" 
-              href="mailto:oteroriveradaniel@gmail.com">
-              oteroriveradaniel@gmail.com
-            </a>
-            <h1 id="title-text">
-              Oops. Something went wrong. Try refreshing the page.
-            </h1>
-            <small id="signature-text">- Daniel Otero Rivera | dordev.</small>
-            <div id="profile-icons">
-              <a
-                title="GitHub | Dordev"
-                href="https://github.com/DOR-Developer"
-                target="_blank"
-              >
-                <svg viewBox="0 0 128 128">
-                  <g fill="#181616">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-                    ></path>
-                    <path
-                      d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-                    ></path>
-                  </g>
+        <nav id="top-menu">
+            <ul>
+                <li>
+                    <a class="no-route" href="#"></a>
+                    <a class="no-route-small" href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="no-route" href="#about"></a>
+                    <a class="no-route-small" href="#about">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="no-route" href="#components"></a>
+                    <a class="no-route-small" href="#components">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li id="download-cv">
+                    <a class="no-route" href="#cv"></a>
+                    <a class="no-route-small" href="#cv">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="M240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a role="button" id="change-theme">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                            <path
+                                d="M480-80q-33 0-56.5-23.5T400-160h160q0 33-23.5 56.5T480-80ZM320-200v-80h320v80H320Zm10-120q-69-41-109.5-110T180-580q0-125 87.5-212.5T480-880q125 0 212.5 87.5T780-580q0 81-40.5 150T630-320H330Zm24-80h252q45-32 69.5-79T700-580q0-92-64-156t-156-64q-92 0-156 64t-64 156q0 54 24.5 101t69.5 79Zm126 0Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <section id="introduction">
+                <div id="profile-pic-container">
+                    <div id="profile-pic-loader" class="loading-border"></div>
+                    <img title="Image provided by Lorem Picsum" id="profile-pic" src="https://picsum.photos/500"
+                        alt="Lorem ipsum randomly generated image" height="200" width="200" />
+                </div>
+                <div>
+                    <a class="contact-email" href="mailto:oteroriveradaniel@gmail.com">
+                        oteroriveradaniel@gmail.com
+                    </a>
+                    <h1 id="title-text">
+Oops. Something went wrong. Try refreshing the page.
+                    </h1>
+                    <small id="signature-text">- Daniel Otero Rivera | dordev.</small>
+                    <div id="profile-icons">
+                        <a title="GitHub | Dordev" href="https://github.com/DOR-Developer" target="_blank">
+                            <svg viewBox="0 0 128 128">
+                                <g fill="#181616">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+                                    </path>
+                                    <path
+                                        d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a title="Twitter | Dordev" href="https://twitter.com/_dordev" target="_blank">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"
+                                class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-18jsvk2 r-16y2uox r-8kz0gk">
+                                <g>
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        |
+                        <a title="GitHub | Daniel Otero Rivera" href="https://github.com/DanielOR-6" target="_blank">
+                            <svg viewBox="0 0 128 128">
+                                <g fill="#181616">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z">
+                                    </path>
+                                    <path
+                                        d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0">
+                                    </path>
+                                </g>
+                            </svg>
+                        </a>
+                        <a title="LinkedIn | Daniel Otero Rivera"
+                            href="https://www.linkedin.com/in/daniel-otero-rivera-dordev" target="_blank">
+                            <svg viewBox="0 0 128 128">
+                                <path
+                                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="about">
+                <pre id="about-text">
+Oops. Something went wrong. Try refreshing the page.</pre>
+            </section>
+            <section id="components">
+                <pre id="components-text">
+Oops. Something went wrong. Try refreshing the page.</pre>
+            </section>
+            <section id="table" class="component">
+                <figure class="components-card">
+                    <a href="./table.html" target="_blank"><img src="../public/assets/png/dor-table.png"
+                            alt="Table component preview image" class="figure-image" loading="lazy" height="588"
+                            width="956" /></a>
+                    <figcaption>
+                        <h2>TABLE</h2>
+                        <pre id="table-component-text">
+Oops. Something went wrong. Try refreshing the page.</pre>
+                    </figcaption>
+                </figure>
+            </section>
+            <section id="gallery" class="component">
+                <figure class="components-card">
+                    <a href="./gallery.html" target="_blank"><img src="../public/assets/png/dor-gallery.png"
+                            alt="Gallery component preview image" class="figure-image" loading="lazy" height="704"
+                            width="958" /></a>
+                    <figcaption>
+                        <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                <path
+                                    d="M686-132 444-376q-20 8-40.5 12t-43.5 4q-100 0-170-70t-70-170q0-36 10-68.5t28-61.5l146 146 72-72-146-146q29-18 61.5-28t68.5-10q100 0 170 70t70 170q0 23-4 43.5T584-516l244 242q12 12 12 29t-12 29l-84 84q-12 12-29 12t-29-12Zm29-85 27-27-256-256q18-20 26-46.5t8-53.5q0-60-38.5-104.5T386-758l74 74q12 12 12 28t-12 28L332-500q-12 12-28 12t-28-12l-74-74q9 57 53.5 95.5T360-440q26 0 52-8t47-25l256 256ZM472-488Z" />
+                            </svg>GALLERY
+                        </h2>
+                        <pre id="gallery-component-text">
+Oops. Something went wrong. Try refreshing the page.</pre>
+                    </figcaption>
+                </figure>
+            </section>
+            <section id="kanban" class="component">
+                <figure class="components-card">
+                    <a href="./kanban.html" target="_blank"><img src="../public/assets/png/dor-kanban.png"
+                            alt="Kanban component preview image" class="figure-image" loading="lazy" height="801"
+                            width="959" /></a>
+                    <figcaption>
+                        <h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                                <path
+                                    d="M686-132 444-376q-20 8-40.5 12t-43.5 4q-100 0-170-70t-70-170q0-36 10-68.5t28-61.5l146 146 72-72-146-146q29-18 61.5-28t68.5-10q100 0 170 70t70 170q0 23-4 43.5T584-516l244 242q12 12 12 29t-12 29l-84 84q-12 12-29 12t-29-12Zm29-85 27-27-256-256q18-20 26-46.5t8-53.5q0-60-38.5-104.5T386-758l74 74q12 12 12 28t-12 28L332-500q-12 12-28 12t-28-12l-74-74q9 57 53.5 95.5T360-440q26 0 52-8t47-25l256 256ZM472-488Z" />
+                            </svg>KANBAN COMPONENT
+                        </h2>
+                        <pre id="kanban-component-text">
+Oops. Something went wrong. Try refreshing the page.</pre>
+                    </figcaption>
+                </figure>
+            </section>
+            <section id="cv">
+                <div id="cv-menu">
+                    <!--<button type="button" id="full-cv-text"></button>-->
+                    <button type="button" id="simplified-cv-text" class="selected"></button>
+                </div>
+                <object id="cv-preview" data="../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_en.pdf"
+                    type="application/pdf" width="100%" height="100%">
+                    <pre id="cv-preview-text">
+Oops. Something went wrong. Try refreshing the page.</pre>
+                    <a role="button" id="cv-download-text"
+                        href="../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_en.pdf" download>Download</a>
+                </object>
+            </section>
+            <button id="go-to-top">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+                    <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
                 </svg>
-              </a>
-              <a title="Twitter | Dordev" href="https://twitter.com/_dordev">
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  class="r-4qtqp9 r-yyyyoo r-dnmrzs r-bnwqim r-1plcrui r-lrvibr r-lrsllp r-18jsvk2 r-16y2uox r-8kz0gk"
-                >
-                  <g>
-                    <path
-                      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-                    ></path>
-                  </g>
-                </svg>
-              </a>
-              |
-              <a
-                title="GitHub | Daniel Otero Rivera"
-                href="https://github.com/DanielOR-6"
-                target="_blank"
-              >
-                <svg viewBox="0 0 128 128">
-                  <g fill="#181616">
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M64 5.103c-33.347 0-60.388 27.035-60.388 60.388 0 26.682 17.303 49.317 41.297 57.303 3.017.56 4.125-1.31 4.125-2.905 0-1.44-.056-6.197-.082-11.243-16.8 3.653-20.345-7.125-20.345-7.125-2.747-6.98-6.705-8.836-6.705-8.836-5.48-3.748.413-3.67.413-3.67 6.063.425 9.257 6.223 9.257 6.223 5.386 9.23 14.127 6.562 17.573 5.02.542-3.903 2.107-6.568 3.834-8.076-13.413-1.525-27.514-6.704-27.514-29.843 0-6.593 2.36-11.98 6.223-16.21-.628-1.52-2.695-7.662.584-15.98 0 0 5.07-1.623 16.61 6.19C53.7 35 58.867 34.327 64 34.304c5.13.023 10.3.694 15.127 2.033 11.526-7.813 16.59-6.19 16.59-6.19 3.287 8.317 1.22 14.46.593 15.98 3.872 4.23 6.215 9.617 6.215 16.21 0 23.194-14.127 28.3-27.574 29.796 2.167 1.874 4.097 5.55 4.097 11.183 0 8.08-.07 14.583-.07 16.572 0 1.607 1.088 3.49 4.148 2.897 23.98-7.994 41.263-30.622 41.263-57.294C124.388 32.14 97.35 5.104 64 5.104z"
-                    ></path>
-                    <path
-                      d="M26.484 91.806c-.133.3-.605.39-1.035.185-.44-.196-.685-.605-.543-.906.13-.31.603-.395 1.04-.188.44.197.69.61.537.91zm2.446 2.729c-.287.267-.85.143-1.232-.28-.396-.42-.47-.983-.177-1.254.298-.266.844-.14 1.24.28.394.426.472.984.17 1.255zM31.312 98.012c-.37.258-.976.017-1.35-.52-.37-.538-.37-1.183.01-1.44.373-.258.97-.025 1.35.507.368.545.368 1.19-.01 1.452zm3.261 3.361c-.33.365-1.036.267-1.552-.23-.527-.487-.674-1.18-.343-1.544.336-.366 1.045-.264 1.564.23.527.486.686 1.18.333 1.543zm4.5 1.951c-.147.473-.825.688-1.51.486-.683-.207-1.13-.76-.99-1.238.14-.477.823-.7 1.512-.485.683.206 1.13.756.988 1.237zm4.943.361c.017.498-.563.91-1.28.92-.723.017-1.308-.387-1.315-.877 0-.503.568-.91 1.29-.924.717-.013 1.306.387 1.306.88zm4.598-.782c.086.485-.413.984-1.126 1.117-.7.13-1.35-.172-1.44-.653-.086-.498.422-.997 1.122-1.126.714-.123 1.354.17 1.444.663zm0 0"
-                    ></path>
-                  </g>
-                </svg>
-              </a>
-              <a
-                title="LinkedIn | Daniel Otero Rivera"
-                href="https://www.linkedin.com/in/daniel-otero-rivera-98961a25a"
-                target="_blank"
-              >
-                <svg viewBox="0 0 128 128">
-                  <path
-                    d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </section>
-        <section id="about">
-          <pre id="about-text">
-Oops. Something went wrong. Try refreshing the page.</pre
-          >
-        </section>
-        <section id="components">
-          <pre id="components-text">
-Oops. Something went wrong. Try refreshing the page.</pre
-          >
-        </section>
-        <section id="table" class="component">
-          <figure class="components-card">
-            <a href="./table.html" target="_blank"
-              ><img
-                src="../public/assets/png/dor-table.png"
-                alt="Table component preview image"
-                class="figure-image"
-                loading="lazy"
-                height="588"
-                width="956"
-            /></a>
-            <figcaption>
-              <h2>TABLE</h2>
-              <pre id="table-component-text">
-Oops. Something went wrong. Try refreshing the page.</pre
-              >
-            </figcaption>
-          </figure>
-        </section>
-        <section id="gallery" class="component">
-          <figure class="components-card">
-            <a href="./gallery.html" target="_blank"
-              ><img
-                src="../public/assets/png/dor-gallery.png"
-                alt="Gallery component preview image"
-                class="figure-image"
-                loading="lazy"
-                height="704"
-                width="958"
-            /></a>
-            <figcaption>
-              <h2>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M686-132 444-376q-20 8-40.5 12t-43.5 4q-100 0-170-70t-70-170q0-36 10-68.5t28-61.5l146 146 72-72-146-146q29-18 61.5-28t68.5-10q100 0 170 70t70 170q0 23-4 43.5T584-516l244 242q12 12 12 29t-12 29l-84 84q-12 12-29 12t-29-12Zm29-85 27-27-256-256q18-20 26-46.5t8-53.5q0-60-38.5-104.5T386-758l74 74q12 12 12 28t-12 28L332-500q-12 12-28 12t-28-12l-74-74q9 57 53.5 95.5T360-440q26 0 52-8t47-25l256 256ZM472-488Z"
-                  /></svg
-                >GALLERY
-              </h2>
-              <pre id="gallery-component-text">
-Oops. Something went wrong. Try refreshing the page.</pre
-              >
-            </figcaption>
-          </figure>
-        </section>
-        <section id="kanban" class="component">
-          <figure class="components-card">
-            <a href="./kanban.html" target="_blank"
-              ><img
-                src="../public/assets/png/dor-kanban.png"
-                alt="Kanban component preview image"
-                class="figure-image"
-                loading="lazy"
-                height="801"
-                width="959"
-            /></a>
-            <figcaption>
-              <h2>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path
-                    d="M686-132 444-376q-20 8-40.5 12t-43.5 4q-100 0-170-70t-70-170q0-36 10-68.5t28-61.5l146 146 72-72-146-146q29-18 61.5-28t68.5-10q100 0 170 70t70 170q0 23-4 43.5T584-516l244 242q12 12 12 29t-12 29l-84 84q-12 12-29 12t-29-12Zm29-85 27-27-256-256q18-20 26-46.5t8-53.5q0-60-38.5-104.5T386-758l74 74q12 12 12 28t-12 28L332-500q-12 12-28 12t-28-12l-74-74q9 57 53.5 95.5T360-440q26 0 52-8t47-25l256 256ZM472-488Z"
-                  /></svg
-                >KANBAN COMPONENT
-              </h2>
-              <pre id="kanban-component-text">
-Oops. Something went wrong. Try refreshing the page.</pre
-              >
-            </figcaption>
-          </figure>
-        </section>
-        <section id="cv">
-          <div id="cv-menu">
-            <button type="button" id="full-cv-text"></button>
-            <button
-              type="button"
-              id="simplified-cv-text"
-              class="selected"
-            ></button>
-          </div>
-          <iframe
-            id="cv-preview"
-            src="../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_en.pdf"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          >
-            <pre id="cv-preview-text">
-Oops. Something went wrong. Try refreshing the page.</pre
-            >
-            <a
-              role="button"
-              id="cv-download-text"
-              href="../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_en.pdf"
-              download
-              >Button</a
-            >
-          </iframe>
-        </section>
-        <button id="go-to-top">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24"
-            viewBox="0 -960 960 960"
-            width="24"
-          >
-            <path
-              d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-            />
-          </svg>
-        </button>
-        <footer>
-          <a href="https://picsum.photos" target="_blank" id="credits-images-by"
-            >Lorem Picsum</a
-          >
-          <a
-            href="https://fonts.google.com/icons"
-            target="_blank"
-            id="credits-icons-by"
-            >Google Fonts</a
-          >
-        </footer>
-      </main>
+            </button>
+            <footer>
+                <a href="https://picsum.photos" target="_blank" id="credits-images-by">Lorem Picsum</a>
+                <a href="https://fonts.google.com/icons" target="_blank" id="credits-icons-by">Google Fonts</a>
+                <span>
+                    <pre id="credits-contact-text"></pre>
+                    <a 
+                    class="contact-email"
+                    href="mailto:oteroriveradaniel@gmail.com">
+                    oteroriveradaniel@gmail.com
+                </a></span>
+            </footer>
+        </main>
     </div>
 
     <script type="module" src="./public/scripts/index.js"></script>
-  </body>
+</body>
+
 </html>

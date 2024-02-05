@@ -107,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			document.getElementById("kanban-component-text").innerHTML =
         translations[language]["components"]["kanban"];
 
-			document.getElementById("full-cv-text").innerHTML =
-        translations[language]["cv"]["full"];
+			//document.getElementById("full-cv-text").innerHTML =
+        //translations[language]["cv"]["full"];
 			document.getElementById("simplified-cv-text").innerHTML =
         translations[language]["cv"]["simple"];
 			try {
@@ -124,12 +124,14 @@ document.addEventListener("DOMContentLoaded", () => {
         translations[language]["credits"]["images"];
 			document.getElementById("credits-icons-by").innerHTML =
         translations[language]["credits"]["icons"];
+            document.getElementById("credits-contact-text").innerHTML =
+        translations[language]["credits"]["contact"];
 
 			document.title = translations[language]["html-title"];
 			document
 				.getElementById("cv-preview")
 				.setAttribute(
-					"src",
+					"data",
 					`../public/assets/pdf/cv_daniel_otero_rivera_frontend_dev_${language}.pdf`,
 				);
 
