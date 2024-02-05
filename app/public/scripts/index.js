@@ -171,18 +171,31 @@ document.addEventListener("DOMContentLoaded", () => {
 			.classList.remove("loading-border");
 	}, 750);
 
+    let loadingImageTimeout = null;
 	let imageSourceCount = 0;
 	document.getElementById("profile-pic").addEventListener("click", (ev) => {
 		try {
 			imageSourceCount++;
-
-			document
+            
+            document
+                .getElementById("profile-pic-loader")
+                .classList.remove("loading-border");
+            if (loadingImageTimeout) {
+                clearTimeout(loadingImageTimeout);
+            }
+            // 1 milisecond needed to remove the css class 
+            // before setting it so the animation resets properly.
+            setTimeout(() => {
+                document
 				.getElementById("profile-pic-loader")
 				.classList.add("loading-border");
-			setTimeout(() => {
+            }, 1);
+			
+			loadingImageTimeout= setTimeout(() => {
 				document
 					.getElementById("profile-pic-loader")
 					.classList.remove("loading-border");
+                    loadingImageTimeout = null;
 			}, 750);
 
 			ev.target.setAttribute(

@@ -19,6 +19,7 @@ Descárgelo para ver el contenido.`,
 			download: "Descargar CV",
 		},
 		about: `Soy Daniel Otero Rivera, desarrollador de software.
+Online quizás me encuentres por el seudónimo "dordev".
 
 He estado aprendiendo programación desde 2019. Anteriormente estudié ilustración y diseño gráfico.
 
@@ -100,8 +101,9 @@ Download CV to view its contents.`,
 			download: "Download CV",
 		},
 		about: `I'm Daniel Otero Rivera, a software developer.
+Online you may find me by the pseudonym "dordev".
 
-I've been learning programming since 2019. Previously I studied arts and graphic design.
+I've been learning programming since 2019. Previously, I studied arts and graphic design.
 
 I started this journey with web technologies through a brief Web Development course here in Spain, using primarilly Vanilla JavaScript and PHP.
 I've put a lot of time and effort getting into CSS to provide the best web experiences I can, using my artistic background as a strong foundation for my web layouts and themes.
