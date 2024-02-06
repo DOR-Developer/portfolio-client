@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
 		toggleWebTheme();
 	});
 
-	setWebLanguage();
-    toggleWebTheme();
+	setWebLanguage(true);
+    toggleWebTheme(true);
 
 	Array.from(document.getElementsByClassName("change-language")).forEach(
 		(button) => {
@@ -58,13 +58,13 @@ document.addEventListener("DOMContentLoaded", () => {
 					document.body.classList.remove("en");
 					document.body.classList.add(language);
 
-					setWebLanguage();
+                    setWebLanguage();
 				});
 			} catch (error) {}
 		},
 	);
 
-    function toggleWebTheme() {
+    function toggleWebTheme(initial) {
         try {
             const light = document.body.classList.contains("light");
             const dark = document.body.classList.contains("dark");
@@ -81,24 +81,40 @@ document.addEventListener("DOMContentLoaded", () => {
                     ? "dark"
                     : "dark";
 
+            
             document.body.classList.remove("light");
             document.body.classList.remove("dark");
-            document.body.classList.add(newTheme);
-            document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${newTheme}.ico`;
-        
+            if (initial) {
+                document.body.classList.add(localStorage.getItem("fav-theme") ?? "dark");
+            } else {
+                document.body.classList.add(newTheme);
+    
+                localStorage.setItem("fav-theme", newTheme) ?? "dark";
+                
+                document.querySelector('link[rel="shortcut icon"]').href = `./public/assets/favicon-${newTheme}.ico`;
+            }
+            
         } catch (error) {}
     }
 
-	function setWebLanguage() {
+	function setWebLanguage(initial) {
 		try {
 			const spanish = document.body.classList.contains("es");
 			const english = document.body.classList.contains("en");
 
-			const language = spanish
+			const language = initial ? (localStorage.getItem("fav-language") ?? "es") : spanish
 				? "es"
 				: english
 					? "en"
 					: localStorage.getItem("fav-language") ?? "en";
+
+            console.log(initial, language);
+
+            if (initial) {
+                document.body.classList.remove("es");
+                document.body.classList.remove("en");
+                document.body.classList.add(language);
+            }
 
 			Array.from(document.getElementsByClassName("change-language")).forEach(
 				(btn) => {
