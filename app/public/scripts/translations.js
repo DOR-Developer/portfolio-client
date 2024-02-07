@@ -23,7 +23,7 @@ Online quizás me encuentres por el seudónimo "dordev".
         
 He estado aprendiendo programación desde 2019. Anteriormente, estudié ilustración y diseño gráfico.
 
-Me adentré en este viaje con tecnologías web a través de un pequeño curso de Desarrollo Web en España, utilizando principalmente JavaScript Vanilla y PHP.
+Me adentré en este viaje con tecnologías web a través de un pequeño curso de Desarrollo Web en España, utilizando principalmente Vanilla JavaScript y PHP.
 He dedicado mucho tiempo y esfuerzo en CSS para poder proporcionar las mejores experiencias web posibles, utilizando mi formación artística como una fuerte base cara mis composiciones y diseños web.
 
 A finales de 2021, comenzé mis estudios oficiales en Desarollo de Aplicaciones Multiplataforma.
