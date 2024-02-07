@@ -160,7 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("credits-contact-text").innerHTML =
         translations[language]["credits"]["contact"];
 
-			document.title = translations[language]["html-title"];
 			document
 				.getElementById("cv-preview")
 				.setAttribute(

@@ -9,7 +9,6 @@ export default {
 			about: "Sobre mí",
 			cv: "CV",
 		},
-		"html-title": "Portfolio | dordev",
 		title: "Bienvenid@ a mi portfolio.",
 		cv: {
 			full: "Diseño",
@@ -97,7 +96,6 @@ Aunque todavía está lejos de estar finalizado, consideré oportuno incluírlo 
 			about: "About me",
 			cv: "CV",
 		},
-		"html-title": "Portfolio | dordev",
 		title: "Welcome to my portfolio.",
 		cv: {
 			full: "Design",
