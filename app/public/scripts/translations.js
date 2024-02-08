@@ -27,7 +27,7 @@ He dedicado mucho tiempo y esfuerzo en CSS para poder proporcionar las mejores e
 
 A finales de 2021, comenzé mis estudios oficiales en Desarollo de Aplicaciones Multiplataforma.
 Es aquí donde aprendí acerca de las bases de datos relacionales en más profundidad y me adentré en lenguajes fuertemente tipados con Java.
-Apredí diferentes entornos Linux y me familiaricé con la terminal del sistema y sus operaciones más importantes.
+Aprendí diferentes entornos Linux y me familiaricé con la terminal del sistema y sus operaciones más importantes.
 
 Desde que acabé mi formación, he estado trabajando a tiempo completo en una pequeña empresa de software SaaS cerca de mi cuidad natal.
 
@@ -156,7 +156,7 @@ Each element works as an individual component itself with the listed functionali
 * Some buttons serve only mockup purposes.`,
 			/* TABLE */
             table_title: "Table", 
-			table: `This was the first component I got into after learning jQuery and it's currently the one with the most functionalities imlpemented.
+			table: `This was the first component I got into after learning jQuery and it's currently the one with the most functionalities implemented.
 
 I've worked with jqxGrid from jQWidgets for a while and I've always had some issues with the workflow that I didn't like. This component aims to take the best from jqxGrid and take it to the next level in usability and customization. 
 Keep in mind that, although it's inspired by jqxGrid, the component wasn't built on top of it, but from scratch.
@@ -169,9 +169,9 @@ Every button can be interacted with, so please go have a look!`,
             kanban_title: "Kanban", 
 			kanban: `The latest addition to my personal components library.
 
-After I was happy with the state of the other components, it took me a while to decide which concept to take uppon next. Finally, I decided to develop a custom kanban to challenge my skills.
+After I was happy with the state of the other components, it took me a while to decide which concept to take up on next. Finally, I decided to develop a custom kanban to challenge my skills.
 
-Although far from finished, I decided to include with the sole purpose of showcasing its design and layout. 
+Although far from finished, I decided to include it with the sole purpose of showcasing its design and layout. 
 
 * On desktop, cards can be moved around from rows and columns.`,
 		},
